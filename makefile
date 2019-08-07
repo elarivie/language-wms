@@ -1,0 +1,2 @@
+PUBLISH:
+	apm publish
