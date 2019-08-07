@@ -1,2 +1,2 @@
 PUBLISH:
-	apm publish
+	apm publish minor
