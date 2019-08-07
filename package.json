@@ -1,7 +1,7 @@
 {
   "name": "language-wms",
   "theme": "syntax",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "WMS language support in atom.",
   "keywords": [
     "language",
@@ -16,7 +16,6 @@
     "atom": "*",
     "node": "*"
   },
-  "main": "lib/main",
   "dependencies": {
     "tree-sitter-wms": "^0.0.1"
   }
