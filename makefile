@@ -1,2 +1,2 @@
 PUBLISH:
-	apm publish minor
+	apm publish patch
