@@ -2,7 +2,7 @@
   "name": "language-wms",
   "theme": "syntax",
   "version": "0.2.1",
-  "description": "WML language support in atom.",
+  "description": "WMS language support in atom.",
   "keywords": [
     "language",
     "syntax",
@@ -13,8 +13,10 @@
   "repository": "https://github.com/elarivie/language-wms",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": "*",
+    "node": "*"
   },
+  "main": "lib/main",
   "dependencies": {
     "tree-sitter-wms": "^0.0.1"
   }
