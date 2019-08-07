@@ -1,0 +1,9 @@
+{
+	name: 'WAC Meta Syntax'
+	scopeName: 'source.wms'
+	type: 'tree-sitter'
+	parser: 'tree-sitter-wms'
+	fileTypes: [
+		"wms"
+	],
+}
