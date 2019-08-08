@@ -3,24 +3,9 @@ scopeName: 'source.wms'
 type: 'tree-sitter'
 parser: 'tree-sitter-wms'
 
-fileTypes: [
-  'wms'
-]
+fileTypes: ['wms']
 limitLineLength: false
 injectionRegExp: '(WMS|wms)$'
-
-folds: [
-  {
-    type: ['start_tag', 'raw_start_tag', 'self_closing_tag'],
-    start: {index: 1},
-    end: {index: -1}
-  }
-  {
-    type: ['element', 'raw_element'],
-    start: {index: 0},
-    end: {index: -1}
-  }
-]
 
 comments:
   start: '--'
@@ -28,8 +13,3 @@ comments:
 
 scopes:
   'fragment': 'source.wms'
-  'tag_name': 'entity.name.tag'
-  'erroneous_end_tag_name': 'invalid.illegal'
-  'attribute_name': 'entity.other.attribute-name'
-  'attribute_value': 'string.wms'
-  'comment': 'comment.block.wms'
