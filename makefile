@@ -1,2 +1,0 @@
-PUBLISH:
-	apm publish patch
