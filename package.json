@@ -6,7 +6,6 @@
   "keywords": [
     "language",
     "syntax",
-    "theme",
     "wms"
   ],
   "main": "lib/main",
