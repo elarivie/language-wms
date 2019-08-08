@@ -1,7 +1,7 @@
 {
   "name": "language-wms",
   "theme": "syntax",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "WMS language support in atom.",
   "keywords": [
     "language",
