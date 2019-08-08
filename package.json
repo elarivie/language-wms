@@ -1,20 +1,27 @@
 {
-  "name": "language-wms",
-  "version": "0.2.8",
-  "description": "WMS language support in atom.",
+  "author": {
+    "name": "Éric Larivière"
+  },
+  "bugs": {
+    "url": "https://github.com/elarivie/language-wms/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Syntax highlighting for WMS",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/elarivie/language-wms",
   "keywords": [
     "language",
-    "syntax",
     "wms"
   ],
-  "main": "lib/main",
-  "repository": "https://github.com/elarivie/language-wms",
   "license": "MIT",
-  "engines": {
-    "atom": "*",
-    "node": "*"
+  "name": "language-wms",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elarivie/language-wms"
   },
-  "dependencies": {
-    "tree-sitter-wms": "^0.0.1"
-  }
+  "version": "0.1.0"
 }

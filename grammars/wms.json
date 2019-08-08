@@ -1,9 +1,79 @@
 {
-	"name": "WAC Meta Syntax",
-	"scopeName": "source.wms",
-	"type": "tree-sitter",
-	"parser": "tree-sitter-wms",
-	"fileTypes": [
-		"wms"
-	]
+  "scopeName": "source.wms",
+  "name": "WAC Meta Syntax",
+  "fileTypes": [
+    "wms"
+  ],
+  "patterns": [
+    {
+      "begin": "\\(\\*",
+      "end": "\\*\\)",
+      "name": "comment.block.wms",
+      "patterns": [
+        {"match": "."}
+      ]
+    },
+    {
+      "begin": "(.*?)(\\=)",
+      "end": "(;|\\.)",
+      "captures": {
+        "3": {"name": "none.wms"},
+        "2": {"name": "keyword.operator.assignment.wms"},
+        "1": {"name": "support.variable.wms"}
+      },
+      "patterns": [
+        {
+          "begin": "\\?",
+          "end": "\\?",
+          "name": "constant.other.wms",
+          "patterns": [
+            {"match": "."}
+          ]
+        },
+        {
+          "begin": "\"",
+          "end": "\"",
+          "name": "string.quoted.double.untitled.wms",
+          "patterns": [
+            {"match": "."}
+          ]
+        },
+        {
+          "begin": "'",
+          "end": "'",
+          "name": "string.quoted.single.untitled.wms",
+          "patterns": [
+            {"match": "."}
+          ]
+        },
+        {
+          "begin": "\\(\\*",
+          "end": "\\*\\)",
+          "name": "comment.block.wms",
+          "patterns": [
+            {"match": "."}
+          ]
+        },
+        {
+          "match": "\\{|\\}",
+          "name": "constant.character.escape.wms"
+        },
+        {
+          "match": "\\(|\\)",
+          "name": "keyword.other.wms"
+        },
+        {
+          "match": "\\[|\\]|\\-",
+          "name": "constant.character.escape.wms"
+        },
+        {
+          "match": "(\\d+)\\s+(\\*)",
+          "captures": {
+            "1": {"name": "constant.numeric.integer.decimal.wms"},
+            "2": {"name": "keyword.other.wms"}
+          }
+        }
+      ]
+    }
+  ]
 }
