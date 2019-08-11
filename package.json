@@ -6,7 +6,9 @@
     "url": "https://github.com/elarivie/language-wms/issues"
   },
   "bundleDependencies": false,
-  "dependencies": {"tree-sitter-wms": "*"},
+  "dependencies": {
+    "tree-sitter-wms": "*"
+  },
   "deprecated": false,
   "description": "Syntax highlighting for WAC Meta Syntax",
   "engines": {
@@ -23,5 +25,5 @@
     "type": "git",
     "url": "https://github.com/elarivie/language-wms"
   },
-  "version": "0.2.10"
+  "version": "0.2.11"
 }
