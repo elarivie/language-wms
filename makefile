@@ -1,3 +1,6 @@
+
+APM=apm
+
 gitcommit:
 	git commit -m "WIP"
 atomPublishMajor: gitcommit
