@@ -11,12 +11,7 @@ injectionRegExp: '(WMS|wms)$'
 
 folds: [
   {
-    type: ['start_tag', 'raw_start_tag', 'self_closing_tag'],
-    start: {index: 1},
-    end: {index: -1}
-  }
-  {
-    type: ['RULE', 'COMMENT'],
+    type: ['RULE', 'RULE_END'],
     start: {index: 0},
     end: {index: -1}
   }
@@ -27,30 +22,21 @@ comments:
   end: ';'
 
 scopes:
-  'fragment': 'source.wms'
+  
+  # Names
   'NON_TERMINAL_NAME': 'entity.name.tag'
-  'erroneous_end_tag_name': 'invalid.illegal'
-  'doctype': 'meta.tag.doctype.wms'
-  'attribute_name': 'entity.other.attribute-name'
-  'attribute_value': 'string.html'
+
+  # Values
+  'HEX': 'entity.other.attribute-name'
+  'SYMBOL_INFINITY': 'entity.other.attribute-name'
+
+  # Punctuation
+  'SYMBOL_EQUAL': 'string.html'
+  'SYMBOL_OR': 'string.html'
+  'RULE_END': 'string.html'
+
+  # Comment
   'COMMENT': 'comment.block.html'
 
-  '
-    start_tag > "<",
-    end_tag > "</"
-  ': 'punctuation.definition.tag.begin'
-  '
-    start_tag > ">",
-    end_tag > ">"
-  ': 'punctuation.definition.tag.end'
-
-  'attribute > "="': 'punctuation.separator.key-value.html'
-
-  # quoted_attribute_value has three child nodes: ", attribute_value, and ".
-  # Target the first and last.
-  # Single quotes and double quotes are targeted in separate selectors because
-  # of quote-escaping difficulties.
-  "quoted_attribute_value > '\"':nth-child(0)": 'punctuation.definition.string.begin'
-  'quoted_attribute_value > "\'":nth-child(0)': 'punctuation.definition.string.begin'
-  "quoted_attribute_value > '\"':nth-child(2)": 'punctuation.definition.string.end'
-  'quoted_attribute_value > "\'":nth-child(2)': 'punctuation.definition.string.end'
+  # Multi
+  'MULTI': 'punctuation.definition.string.begin'
