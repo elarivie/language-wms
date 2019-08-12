@@ -1,3 +1,5 @@
+gitcommit:
+	git commit -m "WIP"
 atomPublishMajor: gitcommit
 	${APM} publish major
 atomPublishMinor: gitcommit
