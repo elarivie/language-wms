@@ -28,12 +28,12 @@ comments:
 
 scopes:
   'fragment': 'source.wms'
-  'tag_name': 'entity.name.tag'
+  'NON_TERMINAL_NAME': 'entity.name.tag'
   'erroneous_end_tag_name': 'invalid.illegal'
   'doctype': 'meta.tag.doctype.wms'
   'attribute_name': 'entity.other.attribute-name'
   'attribute_value': 'string.html'
-  'comment': 'comment.block.html'
+  'COMMENT': 'comment.block.html'
 
   '
     start_tag > "<",
