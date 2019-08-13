@@ -18,6 +18,7 @@
   "dependencies": {
     "atom-package-deps": "^5.0.0",
     "atom-linter": "^10.0.0",
+    "tree-sitter": "*",
     "tree-sitter-wms": "*"
   },
   "package-deps": [
