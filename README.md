@@ -1,3 +1,46 @@
 # language-wmf
 
-Syntax highlighting for WAC Meta Syntax
+Atom package which provide Lint and syntax highlight for WAC Meta Syntax files (**.wmf**).
+
+META Syntax of WMF files:
+
+    WMS ::= RULE*;
+    RULE::= NON_TERMINAL_NAME EQUAL LEFT OR* COMMENT? RULE_END;
+    RULE_END ::= [3B] ([A]|[D])*;
+
+    MIN ::= HEX;
+    MIN_MAX ::= HEX;
+    MAX ::= HEX|SYMBOL_INFINITY;
+    RANGE_MIN_MAX::= ((MIN SYMBOL_RANGE_DELIMITER MAX)|MIN_MAX);
+
+    GROUP ::= SYMBOL_GROUP_OPEN LEFT OR* SYMBOL_GROUP_CLOSE;
+
+    TOKEN ::= SPACING* (GROUP|TERMINAL|NON_TERMINAL_NAME) MULTI?;
+
+    LEFT ::= TOKEN+;
+    RIGHT ::= TOKEN+;
+    OR ::= SYMBOL_OR RIGHT;
+
+    HEX ::= ([30-39]|[41-46])+;
+    SPACING ::= [20];
+    EQUAL ::= SPACING* SYMBOL_EQUAL;
+    COMMENT ::= SYMBOL_COMMENT_START BLABLABLA;
+    BLABLABLA ::= ([0-3A]|[3C-∞])*;
+    NON_TERMINAL_NAME ::= ([30-39]|[41-5A]|[5F])+;
+    TERMINAL ::= SYMBOL_TERMINAL_OPEN RANGE_MIN_MAX SYMBOL_TERMINAL_CLOSE;
+    MULTI ::= MULTI_01|MULTI_0P|MULTI_1P|MULTI_X;
+    MULTI_01 ::= [3F];
+    MULTI_0P ::= [2A];
+    MULTI_1P ::= [2B];
+    MULTI_X ::= SYMBOL_MULTI_X_OPEN RANGE_MIN_MAX SYMBOL_MULTI_X_CLOSE;
+    SYMBOL_INFINITY ::= [221E];
+    SYMBOL_EQUAL ::= [58]{2}[3D];
+    SYMBOL_MULTI_X_OPEN ::= [7B];
+    SYMBOL_MULTI_X_CLOSE ::= [7D];
+    SYMBOL_TERMINAL_OPEN ::= [5B];
+    SYMBOL_TERMINAL_CLOSE ::= [5D];
+    SYMBOL_GROUP_OPEN ::= [28];
+    SYMBOL_GROUP_CLOSE ::= [29];
+    SYMBOL_COMMENT_START ::= [2D]{2};
+    SYMBOL_OR ::= [7C];
+    SYMBOL_RANGE_DELIMITER ::= [2D];

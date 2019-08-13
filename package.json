@@ -1,4 +1,6 @@
 {
+  "name": "language-wms",
+  "main": "./lib/init",
   "author": {
     "name": "Éric Larivière"
   },
@@ -6,9 +8,22 @@
     "url": "https://github.com/elarivie/language-wms/issues"
   },
   "bundleDependencies": false,
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "2.0.0": "provideLinter"
+      }
+    }
+  },
   "dependencies": {
+    "atom-package-deps": "^5.0.0",
+    "atom-linter": "^10.0.0",
     "tree-sitter-wms": "*"
   },
+  "package-deps": [
+    "linter"
+  ],
+
   "deprecated": false,
   "description": "Syntax highlighting for WAC Meta Syntax",
   "engines": {
@@ -17,10 +32,10 @@
   "homepage": "https://github.com/elarivie/language-wms",
   "keywords": [
     "language",
+    "lint",
     "wms"
   ],
   "license": "MIT",
-  "name": "language-wms",
   "repository": {
     "type": "git",
     "url": "https://github.com/elarivie/language-wms"
