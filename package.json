@@ -23,7 +23,6 @@
   "package-deps": [
     "linter"
   ],
-
   "deprecated": false,
   "description": "Syntax highlighting for WAC Meta Syntax",
   "engines": {
@@ -40,5 +39,5 @@
     "type": "git",
     "url": "https://github.com/elarivie/language-wms"
   },
-  "version": "0.2.15"
+  "version": "0.2.16"
 }
