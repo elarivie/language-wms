@@ -1,5 +1,5 @@
 name: 'WAC Meta Syntax'
-scopeName: 'text.wms.basic'
+scopeName: 'source.wms'
 type: 'tree-sitter'
 parser: 'tree-sitter-wms'
 
