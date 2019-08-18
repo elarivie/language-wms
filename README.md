@@ -1,8 +1,8 @@
-# language-wmf
+# language-wms
 
-Atom package which provide Lint and syntax highlight for WAC Meta Syntax files (**.wmf**).
+Atom package which provides syntax highlight for WAC Meta Syntax files (**.wms**).
 
-META Syntax of WMF files:
+WAC META Syntax of WMS files:
 
     WMS ::= RULE*;
     RULE::= NON_TERMINAL_NAME EQUAL LEFT OR* COMMENT? RULE_END;
