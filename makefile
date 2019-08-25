@@ -1,5 +1,7 @@
 APM=apm
 
+THENAME :="language-wms"
+
 gitcommit:
 	- git commit -m "WIP"
 atomPublishMajor: gitcommit
@@ -10,3 +12,7 @@ atomPublishPatch: gitcommit
 	${APM} publish patch
 atomPublishBuild: gitcommit
 	${APM} publish build
+
+develop:
+	${APM} develop ${THENAME}
+	${ATOM} -d ~/.atom/dev/packages/${THENAME}

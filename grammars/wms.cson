@@ -22,7 +22,10 @@ comments:
   end: ';'
 
 scopes:
-  
+
+  # ENCODING
+  'SYMBOL_ENCODING_END': 'string.html'
+  'ENCODING_NAME': 'entity.other.attribute-name'
   # Names
   'NON_TERMINAL_NAME': 'entity.name.tag'
 
@@ -40,3 +43,4 @@ scopes:
 
   # Multi
   'MULTI': 'punctuation.definition.string.begin'
+
