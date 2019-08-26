@@ -1,46 +1,7 @@
 # language-wms
 
-Atom package which provides syntax highlight for WAC Meta Syntax files (**.wms**).
+[Atom](https://atom.io/) package which provides syntax highlight for WAC Meta Syntax files (**.wms**).
 
-WAC META Syntax of WMS files:
+WMS is a values base  metasyntax notations similar to ([ABNF](https://en.wikipedia.org/wiki/Augmented_Backus%E2%80%93Naur_form), [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form)) which are texts base.  All of those meta syntax languages are used to express context-free language.  The benefits of being values base is for example that it also supports to describe binary format, multi encoding.
 
-    WMS ::= RULE*;
-    RULE::= NON_TERMINAL_NAME EQUAL LEFT OR* COMMENT? RULE_END;
-    RULE_END ::= [3B] ([A]|[D])*;
-
-    MIN ::= HEX;
-    MIN_MAX ::= HEX;
-    MAX ::= HEX|SYMBOL_INFINITY;
-    RANGE_MIN_MAX::= ((MIN SYMBOL_RANGE_DELIMITER MAX)|MIN_MAX);
-
-    GROUP ::= SYMBOL_GROUP_OPEN LEFT OR* SYMBOL_GROUP_CLOSE;
-
-    TOKEN ::= SPACING* (GROUP|TERMINAL|NON_TERMINAL_NAME) MULTI?;
-
-    LEFT ::= TOKEN+;
-    RIGHT ::= TOKEN+;
-    OR ::= SYMBOL_OR RIGHT;
-
-    HEX ::= ([30-39]|[41-46])+;
-    SPACING ::= [20];
-    EQUAL ::= SPACING* SYMBOL_EQUAL;
-    COMMENT ::= SYMBOL_COMMENT_START BLABLABLA;
-    BLABLABLA ::= ([0-3A]|[3C-∞])*;
-    NON_TERMINAL_NAME ::= ([30-39]|[41-5A]|[5F])+;
-    TERMINAL ::= SYMBOL_TERMINAL_OPEN RANGE_MIN_MAX SYMBOL_TERMINAL_CLOSE;
-    MULTI ::= MULTI_01|MULTI_0P|MULTI_1P|MULTI_X;
-    MULTI_01 ::= [3F];
-    MULTI_0P ::= [2A];
-    MULTI_1P ::= [2B];
-    MULTI_X ::= SYMBOL_MULTI_X_OPEN RANGE_MIN_MAX SYMBOL_MULTI_X_CLOSE;
-    SYMBOL_INFINITY ::= [221E];
-    SYMBOL_EQUAL ::= [58]{2}[3D];
-    SYMBOL_MULTI_X_OPEN ::= [7B];
-    SYMBOL_MULTI_X_CLOSE ::= [7D];
-    SYMBOL_TERMINAL_OPEN ::= [5B];
-    SYMBOL_TERMINAL_CLOSE ::= [5D];
-    SYMBOL_GROUP_OPEN ::= [28];
-    SYMBOL_GROUP_CLOSE ::= [29];
-    SYMBOL_COMMENT_START ::= [2D]{2};
-    SYMBOL_OR ::= [7C];
-    SYMBOL_RANGE_DELIMITER ::= [2D];
+To consult the full WMS grammar defined with WMS itself refer to the file: **[WMS.wms](./WMS.wms)**
